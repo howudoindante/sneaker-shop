@@ -1,0 +1,37 @@
+.card {
+  margin: 10px auto;
+  width: 430px;
+  height: 130px;
+  background: #ffffff;
+  border: 1px solid #efefef;
+  border-radius: 24px;
+  position: relative;
+  .sneakersImg {
+    object-fit: cover;
+  }
+  span {
+    width: 200px;
+    font-size: 14px;
+  }
+  div {
+    flex: 1;
+  }
+  &__price {
+    width: 75px;
+    span {
+      width: 100%;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #8b8b8b;
+    }
+    b {
+      font-size: 14px;
+    }
+  }
+  .button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,56 @@
+.card {
+  background: #ffffff;
+  border: 2px solid #f4f4f4;
+  border-radius: 35px;
+  height: 260px;
+  width: 210px;
+  cursor: default;
+  transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  position: relative;
+  .favourite {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+  }
+  .sneakersImg {
+    object-fit: cover;
+  }
+  span {
+    width: 150px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  div {
+    height: 35px;
+    width: 150px;
+  }
+  &__price {
+    width: 60px;
+    span {
+      width: 100%;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #8b8b8b;
+    }
+    b {
+      font-size: 14px;
+    }
+  }
+  &__button {
+    cursor: pointer;
+  }
+  &:hover {
+    border: 2px solid #80749a;
+    box-shadow: 0px 12px 14px 0px #00000026;
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    margin: 0 auto;
+    height: 400px;
+    width: 350px;
+  }
+}

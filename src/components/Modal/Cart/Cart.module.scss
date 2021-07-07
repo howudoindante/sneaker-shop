@@ -1,0 +1,23 @@
+.cartWrapper {
+  height: 100vh;
+  h3 {
+    font-size: 30px;
+  }
+
+  .cartItems {
+    flex: 1;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  .total {
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 30px;
+    width: 430px;
+    .subTotal {
+      font-size: 18px;
+      line-height: 21px;
+      font-weight: normal;
+    }
+  }
+}
