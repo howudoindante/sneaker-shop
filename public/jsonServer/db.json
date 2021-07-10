@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Мужские кроссовки NIKE BLAZER MID 77 VNTG",
+      "img": "/img/sneakers/nike_blazer_red.jpg",
+      "price": 7990
+    },
+    {
+      "id": 2,
+      "title": "Мужские кроссовки Nike AIR FORCE 1 LOW LV8",
+      "img": "/img/sneakers/nike_air_force_red.jpg",
+      "price": 9990
+    },
+    {
+      "id": 3,
+      "title": "Мужские кроссовки Nike AIR FORCE 1 HIGH 07 WB",
+      "img": "/img/sneakers/nike_air_force_sand.jpg",
+      "price": 7990
+    },
+    {
+      "id": 4,
+      "title": "Мужские кроссовки Nike AIR MORE UPTEMPO GS",
+      "img": "/img/sneakers/nikeAirUptempo.jpg",
+      "price": 10490
+    },
+    {
+      "id": 5,
+      "title": "Женские кроссовки PUMA Suede VTG Kidsuper",
+      "img": "/img/sneakers/pumaKidsuper.jpg",
+      "price": 8990
+    },
+    {
+      "id": 6,
+      "title": "Мужские кроссовки ADIDAS NITEBALL FV4830",
+      "img": "/img/sneakers/ADIDASNITEBALL.jpg",
+      "price": 10999
+    },
+    {
+      "id": 7,
+      "title": "Женские кроссовки PUMA RS-Connect Aka Boku",
+      "img": "/img/sneakers/pumars.jpg",
+      "price": 10490
+    },
+    {
+      "id": 8,
+      "title": "Мужские кроссовки Nike KYRIE 7",
+      "img": "/img/sneakers/NikeKYRIE7.jpg",
+      "price": 11599
+    },
+    {
+      "id": 9,
+      "title": "Мужские кроссовки Nike KYRIE 7 BLACK",
+      "img": "/img/sneakers/NikeKYRIE7black.jpg",
+      "price": 11599
+    },
+    {
+      "id": 10,
+      "title": "Женские кроссовки JORDAN ZION 1",
+      "img": "/img/sneakers/JORDANZION1.jpg",
+      "price": 8299
+    },
+    {
+      "id": 11,
+      "title": "Мужские кроссовки Nike LEBRON XVIII",
+      "img": "/img/sneakers/NikeLEBRONXVIII.jpg",
+      "price": 16499
+    },
+    {
+      "id": 12,
+      "title": "Мужские кроссовки Nike BLAZER LOW 77",
+      "img": "/img/sneakers/NikeBLAZERLOW77.jpg",
+      "price": 8299
+    }
+  ],
+  "cart": [],
+  "favourite": [],
+  "orders": []
+}

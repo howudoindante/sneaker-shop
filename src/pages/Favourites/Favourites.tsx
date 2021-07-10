@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../../components/Card/Card";
 import Button, { iconNames } from "../../components/Button/Button";
+import { Link } from "react-router-dom";
 import styles from "./Favourites.module.scss";
 const Favourites = () => {
   function sayHi() {
@@ -9,13 +10,16 @@ const Favourites = () => {
   return (
     <div className={`${styles.FavouritesContent}`}>
       <div className={`${styles.title} d-flex align-center`}>
-        <img className="mr-40" src="/img/back.svg" alt="back" />
+        <Link to="/">
+          <img className="mr-40" src="/img/back.svg" alt="back" />
+        </Link>
+
         <h1>Мои закладки</h1>
       </div>
 
       <div className={`${styles.cards} d-flex flex-wrap flex-wrap  mt-30`}>
-        {[<Card />].length > 0 ? (
-          [<Card />, <Card />, <Card />, <Card />, <Card />]
+        {[].length > 0 ? (
+          ""
         ) : (
           <div className={`${styles.empty} d-flex flex-column align-center`}>
             <img src="/img/thinkEmoji.png" alt="thinkEmoji" className="mt-50" />

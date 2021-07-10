@@ -5,14 +5,21 @@ import Button, { iconNames } from "../../Button/Button";
 
 interface CartTypes {
   onButtonClick: () => void;
+  data: any[];
 }
 
-const Cart = ({ onButtonClick }: CartTypes) => {
+const Cart = ({ onButtonClick, data }: CartTypes) => {
+  const [items, setItems] = data;
+  function removeFromCart(id: number) {
+    setItems((prev: any) => prev.filter((item: any) => item.id !== id));
+  }
   return (
     <div className={`${styles.cartWrapper} d-flex flex-column`}>
       <h3 className="ml-15 mt-50">Корзина</h3>
       <div className={`${styles.cartItems}`}>
-        <CartCard />
+        {items.map((item: any) => (
+          <CartCard key={item.id} remove={removeFromCart} pair={item} />
+        ))}
       </div>
       <div className={`${styles.total}`}>
         Итого

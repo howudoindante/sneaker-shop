@@ -17,9 +17,12 @@
     object-fit: cover;
   }
   span {
+    display: inline-block;
+    height: 60px;
     width: 150px;
     font-size: 14px;
-    line-height: 19px;
+    line-height: 20px;
+    overflow: hidden;
   }
   div {
     height: 35px;
@@ -40,6 +43,9 @@
   &__button {
     cursor: pointer;
   }
+}
+
+.card_additional {
   &:hover {
     border: 2px solid #80749a;
     box-shadow: 0px 12px 14px 0px #00000026;

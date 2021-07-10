@@ -8,15 +8,20 @@ import OrderReady from "./OrderReady/OrderReady";
 interface ModalTypes {
   closeModal: Function;
 }
-let arr = [1, 2, 3];
+
 const Modal: React.FC<ModalTypes> = ({ closeModal }) => {
   const [isOrderReady, setOrderReady] = React.useState(false);
+  const [items, setItems] = React.useState([
+    { id: 1, itemID: 1, name: "Nike Air Max", price: 14000 },
+    { id: 2, itemID: 2, name: "Nike Air Max", price: 14000 },
+  ]);
+  React.useEffect(() => {
+    console.log("Component rerendered,items is equal:", items);
+  }, []);
 
   function MakeOrder() {
     setOrderReady(true);
-    arr = [];
-
-    console.log(isOrderReady, arr);
+    setItems((prev) => []);
   }
   function ClearCart() {
     closeModal((prev: boolean) => !prev);
@@ -35,8 +40,8 @@ const Modal: React.FC<ModalTypes> = ({ closeModal }) => {
         />
         {isOrderReady ? (
           <OrderReady onButtonClick={ClearCart} />
-        ) : arr.length > 0 ? (
-          <Cart onButtonClick={MakeOrder} />
+        ) : items.length > 0 ? (
+          <Cart data={[items, setItems]} onButtonClick={MakeOrder} />
         ) : (
           <EmptyCart onButtonClick={ClearCart} />
         )}

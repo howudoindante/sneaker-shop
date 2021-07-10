@@ -2,6 +2,7 @@ import React from "react";
 import Button, { iconNames } from "../../components/Button/Button";
 import OrderCard from "../../components/OrderCard/OrderCard";
 import styles from "./Orders.module.scss";
+import { Link } from "react-router-dom";
 let arr = [<OrderCard />, <OrderCard />, <OrderCard />, <OrderCard />];
 const Orders = () => {
   function sayHi() {
@@ -10,7 +11,9 @@ const Orders = () => {
   return (
     <div className={`${styles.OrdersContent}`}>
       <div className={`${styles.title} d-flex align-center`}>
-        <img className="mr-40" src="/img/back.svg" alt="back" />
+        <Link to="/">
+          <img className="mr-40" src="/img/back.svg" alt="back" />
+        </Link>
         <h1>Мои заказы</h1>
       </div>
 

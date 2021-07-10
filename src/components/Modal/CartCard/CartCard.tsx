@@ -1,6 +1,11 @@
 import React from "react";
 import styles from "./CartCard.module.scss";
-const CartCard = () => {
+interface CardTypes {
+  remove: Function;
+  pair: any;
+}
+const CartCard = ({ remove, pair }: CardTypes) => {
+  const { id, price } = pair;
   return (
     <div className={`${styles.card} d-flex align-center justify-between`}>
       <img
@@ -15,14 +20,15 @@ const CartCard = () => {
         <div className="d-flex mt-10">
           <div className={`${styles.card__price} d-flex flex-column`}>
             <span>Цена</span>
-            <b>7990 руб.</b>
+            <b>{price} руб.</b>
           </div>
         </div>
       </div>
       <img
         className={`${styles.button} `}
         src="/img/closeSmall.svg"
-        alt="add to cart"
+        alt="remove from cart"
+        onClick={() => remove(id)}
       />
     </div>
   );

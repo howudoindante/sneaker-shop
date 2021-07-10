@@ -18,13 +18,13 @@ function App() {
       <div className={`wrapper clear ${isModalOpen ? "stopScrolling" : ""}`}>
         <Header openModal={setModalOpen} />
         <main>
-          {isModalOpen ? <Cart closeModal={setModalOpen} /> : null}
           <Switch>
             <Route path="/" exact component={Store} />
             <Route path="/favourite" exact component={Favourites} />
             <Route path="/orders" exact component={Orders} />
           </Switch>
         </main>
+        {isModalOpen ? <Cart closeModal={setModalOpen} /> : null}
       </div>
     </Router>
   );
