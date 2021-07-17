@@ -73,7 +73,15 @@
       "price": 8299
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": 1,
+      "originId": 1,
+      "title": "Мужские кроссовки NIKE BLAZER MID 77 VNTG",
+      "img": "/img/sneakers/nike_blazer_red.jpg",
+      "price": 7990
+    }
+  ],
   "favourite": [],
   "orders": []
 }

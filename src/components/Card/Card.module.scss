@@ -5,8 +5,7 @@
   height: 260px;
   width: 210px;
   cursor: default;
-  transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out,
-    transform 0.3s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out;
   position: relative;
   .favourite {
     position: absolute;
@@ -47,7 +46,6 @@
 
 .card_additional {
   &:hover {
-    border: 2px solid #80749a;
     box-shadow: 0px 12px 14px 0px #00000026;
     transform: translateY(-2px);
   }

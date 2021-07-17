@@ -25,7 +25,7 @@ export const storeItems = (state: any = initialState, action: TAction) => {
     case TActionStore.INIT:
       return { ...state };
     case TActionStore.FILLSTORE:
-      return { ...state, items: [...state.items, ...action.payload] };
+      return { ...state, items: action.payload };
     case TActionStore.LOADING:
       return { ...state, isLoading: true };
     case TActionStore.LOADING_FINISH:

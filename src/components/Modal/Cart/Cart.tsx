@@ -6,9 +6,10 @@ import Button, { iconNames } from "../../Button/Button";
 interface CartTypes {
   onButtonClick: () => void;
   data: any[];
+  total: number;
 }
 
-const Cart = ({ onButtonClick, data }: CartTypes) => {
+const Cart = ({ onButtonClick, data, total }: CartTypes) => {
   const [items, setItems] = data;
   function removeFromCart(id: number) {
     setItems((prev: any) => prev.filter((item: any) => item.id !== id));
@@ -26,7 +27,7 @@ const Cart = ({ onButtonClick, data }: CartTypes) => {
         <div
           className={`${styles.subTotal} d-flex justify-between mt-20 mb-10`}
         >
-          <span>Общая сумма заказа</span> <b>18951 руб.</b>
+          <span>Общая сумма заказа</span> <b>{total} руб.</b>
         </div>
       </div>
       <Button

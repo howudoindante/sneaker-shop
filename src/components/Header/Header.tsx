@@ -1,11 +1,13 @@
 import React from "react";
 import styles from "./Header.module.scss";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 interface HeaderTypes {
   openModal: Function;
 }
 
 const Header: React.FC<HeaderTypes> = ({ openModal }) => {
+  const { total } = useSelector((state: any) => state.cartItems);
   return (
     <header className={`${styles.header} d-flex justify-between`}>
       <div className="d-flex align-center">
@@ -63,7 +65,7 @@ const Header: React.FC<HeaderTypes> = ({ openModal }) => {
           className="d-flex align-center mr-20 mb-5"
         >
           <img src="/img/cart.svg" className="mr-10" alt="cart" />
-          <span>1820 руб.</span>
+          <span>{total} руб.</span>
         </li>
         <li className="d-flex align-center mr-20">
           <Link to="/favourite">

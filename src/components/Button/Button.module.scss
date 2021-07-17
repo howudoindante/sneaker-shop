@@ -10,15 +10,11 @@
   font-weight: 800;
   margin: 20px auto;
   transition: font-size 0.5s ease-in-out;
-  &:hover {
-    .arrow {
-      transform: translateX(-10px);
-    }
-  }
+  cursor: pointer;
 }
 
 .arrow {
-  transition: transform 0.5s ease-in-out;
+  transition: transform 4s ease-in-out;
   position: absolute;
   right: 20px;
 }
@@ -26,4 +22,61 @@
 .goBack {
   position: absolute;
   left: 20px;
+}
+
+.loading {
+  animation: loading-button 5s ease-in-out infinite;
+}
+
+.arrow_animate {
+  animation: arrow 7s ease infinite;
+}
+
+@keyframes loading-button {
+  0% {
+    color: black;
+    border: 3px solid #a3a3a3;
+  }
+  20% {
+    color: #a3a3a3;
+    border: 3px solid #c0c0c0;
+  }
+  40% {
+    color: black;
+    border: 3px solid #a3a3a3;
+  }
+  55% {
+    color: #a3a3a3;
+    border: 3px solid #c0c0c0;
+  }
+  70% {
+    color: black;
+    border: 3px solid #a3a3a3;
+  }
+  90% {
+    color: #a3a3a3;
+    border: 3px solid #c0c0c0;
+  }
+  100% {
+    color: black;
+    border: 3px solid #a3a3a3;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateX(-2px);
+  }
+  30% {
+    transform: translateX(3px);
+  }
+  50% {
+    transform: translateX(-2px);
+  }
+  70% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(-2px);
+  }
 }

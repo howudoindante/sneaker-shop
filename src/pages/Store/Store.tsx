@@ -1,32 +1,48 @@
-import axios from "axios";
 import React from "react";
 import Card from "../../components/Card/Card";
 import styles from "./Store.module.scss";
 import { ItemType } from "../../types/types";
-import { useSelector, useDispatch } from "react-redux";
-import { TActionStore } from "../../redux/reducers/storeItems";
-const Store = () => {
-  // const [items, setItems] = React.useState([]);
-  const { items, isLoading } = useSelector((state: any) => state.storeItems);
-  const dispatch = useDispatch();
-  React.useEffect(() => {
-    axios.get("http://localhost:3000/items").then((response) => {
-      dispatch({ type: TActionStore.INIT });
-      dispatch({ type: TActionStore.LOADING });
+import { useSelector } from "react-redux";
 
-      // setTimeout(() => {
-      dispatch({ type: TActionStore.FILLSTORE, payload: response.data });
-      dispatch({ type: TActionStore.LOADING_FINISH });
-      // }, 4000);
-    });
-  }, []);
+const Store = () => {
+  const { items: store, isLoading } = useSelector(
+    (state: any) => state.storeItems
+  );
+  const { items: cartItems } = useSelector((state: any) => state.cartItems);
+  const { items: favItems } = useSelector((state: any) => state.favItems);
 
   return (
     <div className={`${styles.storeContent}`}>
       <h1>Все кроссовки</h1>
       <div className={`${styles.cards} d-flex flex-wrap`}>
-        {items.length > 0 && !isLoading
-          ? items?.map((item: ItemType) => <Card key={item.id} item={item} />)
+        {store && !isLoading
+          ? store?.map((item: ItemType) => {
+              let inCart =
+                cartItems.filter(
+                  (element: any) => Number(element.originId) === Number(item.id)
+                ).length > 0
+                  ? true
+                  : false;
+              let inFavourite =
+                favItems.filter(
+                  (element: any) => Number(element.originId) === Number(item.id)
+                ).length > 0
+                  ? true
+                  : false;
+              return (
+                <Card
+                  key={item.id}
+                  inCart={inCart}
+                  inFavourite={inFavourite}
+                  item={{
+                    originId: item.id,
+                    title: item.title,
+                    img: item.img,
+                    price: item.price,
+                  }}
+                />
+              );
+            })
           : new Array(20)
               .fill(1)
               .map((value, index) => (
